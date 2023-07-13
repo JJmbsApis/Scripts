@@ -208,7 +208,6 @@ function Kavo.CreateLib(kavName, themeList)
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
-
     local blurFrame = Instance.new("Frame")
 
     Kavo:DraggingEnabled(MainHeader, Main)
@@ -287,8 +286,8 @@ function Kavo.CreateLib(kavName, themeList)
 			Size = UDim2.new(0,0,0,0),
 			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
 		}):Play()
-        wait(1)
-        ScreenGui:Destroy()
+         wait(1)
+         Main.Visible = not Main.Visible
     end)
 
     MainSide.Name = "MainSide"
